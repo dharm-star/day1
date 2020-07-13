@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display todays day of the week.</p>
+
+<button onclick="myFunction()">Day</button>
+<button onclick="myTime()">Time</button>
+<button onclick="window.print()">Print this page</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+function myFunction() {
+  var d = new Date();
+  var weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+
+  var n = weekday[d.getDay()];
+  document.getElementById("demo").innerHTML = "Today is: "+n;
+  
+}
+function myTime(){
+    var a = new Date();
+    var h = a.getHours();
+    if(h>12){
+        var z = h-12;
+        document.getElementById("demo1").innerHTML = "curent time is "+z+"pm";
+        
+    }
+
+}
+var d = new Date();
+var dd = d.getDate();
+var mm = d.getMonth();
+var yy = d.getFullYear();
+document.getElementById("demo").innerHTML = "current date: "+dd+"/" +"/"+mm +"/"+yy;
+</script>
+
+</body>
+</html>
